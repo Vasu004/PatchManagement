@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patch Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1.2em;
+            color: #fff;
+            background: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+        .description-box {
+            background: #f9f9f9;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid #007bff;
+        }
+        .description-box h2 {
+            color: #007bff;
+        }
+        .description-box ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        .description-box ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 id="welcomeMessage">Welcome to the Patch Management System</h1>
+    <div class="description-box">
+        <h2>About the Project</h2>
+        <p>Our Patch Management System is designed to handle and deploy software patches efficiently. The application provides a user-friendly interface to view and manage patches.</p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>View all available patches</li>
+            <li>Deploy patches to the system</li>
+            <li>Track and manage patch status</li>
+        </ul>
+        <p>We use Postman to manage and test the requests sent to the server. Postman helps us ensure that our APIs are functioning correctly and allows us to inspect the responses from the server.</p>
+    </div>
+    <button class="button" onclick="showPatches()">Go to Patch Deploy Page</button>
+    <p id="patchMessage" class="hidden">1 patch received</p>
+</div>
+
+<script>
+        function showPatches() {
+            document.getElementById('patchMessage').classList.remove('hidden');
+            window.location.href = 'http://localhost:8080/patches';
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            setTimeout(() => {
+                welcomeMessage.textContent = 'Ready for Patch Update';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
