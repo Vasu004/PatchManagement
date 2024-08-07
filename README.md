@@ -55,15 +55,4 @@ Response:
 
  ]
 
-2. Apply a Patch
-
-Endpoint: POST /patches/{id}/apply
-Response:
- ```bash
-{
-  "id": "1",
-  "description": "Patch 1 Applied"
-}
-
-
 
