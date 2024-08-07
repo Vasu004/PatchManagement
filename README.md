@@ -59,6 +59,7 @@ Response:
 
 Endpoint: POST /patches/{id}/apply
 Response:
+    ```
        {
   "id": "1",
   "description": "Patch 1 Applied"
