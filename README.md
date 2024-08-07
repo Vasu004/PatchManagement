@@ -34,6 +34,7 @@ The Patch Management System is a web application developed using Java and Spring
    ```bash
    git clone https://github.com/yourusername/patch-management-system.git
    cd patch-management-system
+   
 2. Build the project using Maven:
    ```bash
    mvn clean install
@@ -48,11 +49,44 @@ The Patch Management System is a web application developed using Java and Spring
 1. List All Patches
 Endpoint: GET /patches
 Response:
- ```bash
+   ```bash
 [
   {"id": "1", "description": "Patch 1 Deployed"},
   {"id": "2", "description": "Patch 2 Deployed"},
 
  ]
+2. Apply a Patch
+
+Endpoint: POST /patches/{id}/apply
+Response:
+       {
+  "id": "1",
+  "description": "Patch 1 Applied"
+}
+
+    
+**Project Structure
+```bash
+src
+├── main
+│   ├── java
+│   │   └── org
+│   │       └── example
+│   │           ├── PatchManagementApplication.java
+│   │           ├── controller
+│   │           │   ├── PatchController.java
+│   │           │   └── WelcomeController.java
+│   │           ├── model
+│   │           │   └── Patch.java
+│   │           └── service
+│   │               └── PatchService.java
+│   ├── resources
+│       └── templates
+│           └── index.html
+└── test
+    └── java
+        └── org
+            └── example
+                └── PatchManagementApplicationTests.java
 
 
