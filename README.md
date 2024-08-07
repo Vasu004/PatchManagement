@@ -35,3 +35,7 @@ The Patch Management System is a web application developed using Java and Spring
    git clone https://github.com/yourusername/patch-management-system.git
    cd patch-management-system
 2. Build the project using Maven:
+   mvn clean install
+
+3. Run the Spring Boot application:
+   mvn spring-boot:run
