@@ -39,7 +39,31 @@ The Patch Management System is a web application developed using Java and Spring
    mvn clean install
 
 4. Run the Spring Boot application:
-  ```bash
+   ```bash
    mvn spring-boot:run
+   
+5. The application should now be running on http://localhost:8080.
+
+**API Endpoints**
+1. List All Patches
+Endpoint: GET /patches
+Response:
+ ```bash
+[
+  {"id": "1", "description": "Patch 1 Deployed"},
+  {"id": "2", "description": "Patch 2 Deployed"},
+
+ ]
+
+2. Apply a Patch
+
+Endpoint: POST /patches/{id}/apply
+Response:
+ ```bash
+{
+  "id": "1",
+  "description": "Patch 1 Applied"
+}
+
 
 
