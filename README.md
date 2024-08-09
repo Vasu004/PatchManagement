@@ -50,11 +50,12 @@ The Patch Management System is a web application developed using Java and Spring
 Endpoint: GET /patches
 Response:
    ```bash
-[
-  {"id": "1", "description": "Patch 1 Deployed"},
-  {"id": "2", "description": "Patch 2 Deployed"},
+    [
+       {"id": "1", "description": "Patch 1 Deployed"},
+        {"id": "2", "description": "Patch 2 Deployed"},
 
- ]
+       ]
+     
 2. Apply a Patch
 
 Endpoint: POST /patches/{id}/apply
